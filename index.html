@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+
+  <body>
+<!-- Simple chatroom website,
+save all messages in a file, load file with ajax, each element is 1 chat,
+slide all prev messages up when updated, fade new message in, 
+obvious html and css uses, etc -->
+    
+    <div class="container">
+      <button class="clear btn btn-danger">CLEAR CHATROOM</button>
+      <div class="container-fluid messages overflow-auto">
+        <table class="table">
+          <tr scope="row">
+            <th>Name</th>
+            <td>TEST </td>
+          </tr>
+          <tr scope="row">
+            <th>Name</th>
+            <td>TEST TEST TEST</td>
+          </tr>
+          <tr scope="row">
+            <th>Name</th>
+            <td>TEST TEST TEST</td>
+          </tr>
+          <tr scope="row">
+            <th>Name</th>
+            <td>TEST </td>
+          </tr>
+          <tr scope="row">
+            <th>Name</th>
+            <td>TEST TEST TEST</td>
+          </tr>
+          <tr scope="row">
+            <th>Name</th>
+            <td>TEST TEST TEST</td>
+          </tr>
+          <tr scope="row">
+            <th>Name</th>
+            <td>TEST </td>
+          </tr>
+          <tr scope="row">
+            <th>Name</th>
+            <td>TEST TEST TEST</td>
+          </tr>
+          <tr scope="row">
+            <th>Name</th>
+            <td>TEST TEST TEST</td>
+          </tr>
+          <tr scope="row">
+            <th>Name</th>
+            <td>TEST </td>
+          </tr>
+          <tr scope="row">
+            <th>Name</th>
+            <td>TEST TEST TEST</td>
+          </tr>
+          <tr scope="row">
+            <th>Name</th>
+            <td>TEST TEST TEST</td>
+          </tr>
+          <tr scope="row">
+            <th>Name</th>
+            <td>TEST </td>
+          </tr>
+          <tr scope="row">
+            <th>Name</th>
+            <td>TEST TEST TEST</td>
+          </tr>
+          <tr scope="row">
+            <th>Name</th>
+            <td>TEST TEST TEST</td>
+          </tr>
+          <tr scope="row">
+            <th>Name</th>
+            <td>TEST </td>
+          </tr>
+          <tr scope="row">
+            <th>Name</th>
+            <td>TEST TEST TEST</td>
+          </tr>
+          <tr scope="row">
+            <th>Name</th>
+            <td>TEST TEST TEST</td>
+          </tr>
+        </table>
+      </div>
+      <div class="container-fluid messageBar row">
+        <input type="text" id="sendMessage">
+        <button type="button" class="btn btn-primary send">Send</button>
+        <!-- When click or enter: Extract message, clear input, send message
+          , retrieve post -->
+      </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+  </body>
+</html>

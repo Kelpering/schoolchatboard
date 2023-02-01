@@ -1,0 +1,38 @@
+.messageBar
+{
+    position:fixed;
+    bottom:10px;
+    left:10px;
+}
+
+.messages
+{
+    position: fixed;
+    bottom: 50px;
+    left:0;
+    width: 100%;
+}
+
+#sendMessage
+{
+    width:85%;
+    margin-right:15px;
+}
+
+.send
+{
+    width:13%;
+}
+
+th
+{
+    width:15%;
+}
+
+
+.clear
+{
+    position:fixed;
+    right:5px;
+    top:5px;
+}
