@@ -1,9 +1,3 @@
-/* <tr scope="row">
-    <th>Name</th> (VARIABLE)
-    <td>TEST </td> (VARIABLE)
-</tr> */
-//Add this to the file storing the chat room for each new message.
-
 var template = {
 
    combine1 : "<tr scope=\"row\"><th>",
@@ -18,7 +12,6 @@ var template = {
 
 }
 
-localStorage.setItem("Messages", "TEST")
 var storage = localStorage.getItem("Messages");
 
 $(function() 
@@ -28,14 +21,23 @@ $(function()
 
      $(".clear").click(function(){
         localStorage.setItem("Messages", "")
-        $(".messages").html(localStorage.getItem("Messages"));
+        $(".table-messages").fadeOut(function()
+        {
+         $(".table-messages").html(localStorage.getItem("Messages"));
+         $(".table-messages").show();
+        })
+        
      });
 
      $(".send").click(function(){
-        template.Message = $("#sendMessage").value;
-        $("#sendMessage").value = "";
+        template.Message = $("#sendMessage").val();
+        $("#sendMessage").val('');
+        storage = localStorage.getItem("Messages");
         storage += template.fullMessage()
-        localStorage.setItem("Messages", )
+        localStorage.setItem("Messages", storage)
+        console.log(storage);
+        $(".table-messages").html(storage)
+        fadeLast();
 
      });
 
@@ -44,8 +46,20 @@ $(function()
 
         if(keycode=="13")
         {
-            alert("submit")
+         template.Message = $("#sendMessage").val();
+         $("#sendMessage").val('');
+         storage = localStorage.getItem("Messages");
+         storage += template.fullMessage()
+         localStorage.setItem("Messages", storage)
+         $(".table-messages").html(storage)
+         fadeLast();
         }
      });
 
 });
+
+function fadeLast()
+{
+   $(".table-messages tr:last").hide();
+   $(".table-messages tr:last").fadeIn();
+}
