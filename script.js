@@ -18,7 +18,7 @@ $(function()
 {
      
    $(".table-messages").html(storage)
-
+   template.Name = prompt("Enter your username: ");
      $(".clear").click(function(){
         localStorage.setItem("Messages", "")
         $(".table-messages").fadeOut(function()
